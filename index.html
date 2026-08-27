@@ -153,19 +153,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       <div class="pkg-grid">
         <div class="pkg-card" data-pkg="basico" onclick="selectPkg('basico')">
           <div class="pkg-name">Ideal PyMEs</div>
-          <div class="pkg-price">$38,000<span>/mes</span></div>
-          <div class="pkg-desc">Impreso: Cuarto de Plana · Digital: Banner web · Redes: 4 posteos/mes.</div>
+          <div class="pkg-price">$115,000<span>/mes</span></div>
+          <div class="pkg-desc">Digital: Banner Rectangle · Impreso: Cuarto de Plana · Redes: 8 posteos/mes.</div>
         </div>
         <div class="pkg-card" data-pkg="estandar" onclick="selectPkg('estandar')">
           <div class="pkg-badge">★ Más popular</div>
           <div class="pkg-name">Paquete estándar</div>
-          <div class="pkg-price">$78,000<span>/mes</span></div>
-          <div class="pkg-desc">Impreso: Robaplana · Digital: Leaderboard · Redes: 8 posteos/mes · Newsletter: mención NL.</div>
+          <div class="pkg-price">$220,000<span>/mes</span></div>
+          <div class="pkg-desc">Digital: Leaderboard · Impreso: Media Plana · Redes: 12 posteos/mes · Newsletter: mención.</div>
         </div>
         <div class="pkg-card" data-pkg="premium" onclick="selectPkg('premium')">
           <div class="pkg-name">Presencia total</div>
-          <div class="pkg-price">$165,000<span>/mes</span></div>
-          <div class="pkg-desc">Impreso: Plana completa · Digital: todos los espacios · Redes: 12 posteos/mes · Newsletter diario.</div>
+          <div class="pkg-price">$450,000<span>/mes</span></div>
+          <div class="pkg-desc">Digital: 3 espacios fijos · Impreso: Plana completa · Redes: 12 posteos/mes · Newsletter patrocinado.</div>
         </div>
       </div>
       <div class="pkg-medida" data-pkg="medida" onclick="selectPkg('medida')">
@@ -284,34 +284,34 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 <script>
 const CATALOG = {
   impreso:[
-    {id:'plana',    name:'Plana completa',          price:98885, unit:'por publicación · edición impresa de Tribuna Capital'},
-    {id:'mediapl',  name:'Media plana',              price:49442, unit:'por publicación · edición impresa de Tribuna Capital'},
-    {id:'cuarto',   name:'Cuarto de plana',          price:24721, unit:'por publicación · edición impresa de Tribuna Capital'},
+    {id:'plana',    name:'Plana completa',          price:180000, unit:'por publicación · 1 inserción/mes · edición impresa de Tribuna Capital'},
+    {id:'mediapl',  name:'Media plana',              price:90000,  unit:'por publicación · 1 inserción/mes · edición impresa de Tribuna Capital'},
+    {id:'cuarto',   name:'Cuarto de plana',          price:50000,  unit:'por publicación · 1 inserción/mes · edición impresa de Tribuna Capital'},
   ],
   digital:[
-    {id:'leader',     name:'Banner Leaderboard',        price:8500,  unit:'/mes · 728×90 px, portada y secciones'},
-    {id:'rectangle',  name:'Banner Rectangle',           price:6500,  unit:'/mes · 300×250 px, dentro de artículos'},
-    {id:'patrocinio', name:'Patrocinio de sección',      price:11000, unit:'/mes · logo + tagline, exclusivo 1 marca'},
-    {id:'branded',    name:'Branded content',            price:13500, unit:'por artículo · redactado por Tribuna Capital (Pack 3: consultar)'},
-    {id:'publirrep',  name:'Publirreportaje',            price:16000, unit:'por publicación · nota completa + historia de marca + CTA'},
+    {id:'leader',     name:'Banner Leaderboard',        price:65000,  unit:'/mes · 728×90 px, portada y secciones · rotación continua'},
+    {id:'rectangle',  name:'Banner Rectangle',           price:45000,  unit:'/mes · 300×250 px, dentro de artículos · rotación continua'},
+    {id:'patrocinio', name:'Patrocinio de sección',      price:80000,  unit:'/mes · logo + tagline, exclusivo 1 marca · permanente'},
+    {id:'branded',    name:'Branded content',            price:90000,  unit:'por artículo · redactado por Tribuna Capital sobre tu marca'},
+    {id:'publirrep',  name:'Publirreportaje',            price:100000, unit:'por publicación · nota completa + historia de marca + CTA, publicación permanente'},
   ],
   redes:[
-    {id:'pack8',   name:'Pack 8 posteos',   price:16000, unit:'/mes · 8 publicaciones en Instagram + Facebook Tribuna Capital'},
-    {id:'pack12',  name:'Pack 12 posteos',  price:30000, unit:'/mes · presencia semanal constante (16 publicaciones)'},
+    {id:'pack8',   name:'Pack 8 posteos',   price:42000, unit:'/mes · 8 publicaciones en Instagram + Facebook Tribuna Capital (~2 por semana)'},
+    {id:'pack12',  name:'Pack 12 posteos',  price:75000, unit:'/mes · 12 publicaciones, presencia semanal constante (~3 por semana)'},
   ],
   mailing:[
-    {id:'mencion',      name:'Boletín mención (lun-mié-vie)',     price:5500, unit:'/mes · bloque sponsor en newsletter matutino del AMM'},
-    {id:'patrocinado',  name:'Boletín patrocinado (todos los días)', price:8000, unit:'/mes · presencia diaria en el newsletter de Tribuna Capital'},
-    {id:'mailing',      name:'Mailing masivo NL',                 price:18500, unit:'por envío · dedicado a toda la base de suscriptores'},
+    {id:'mencion',      name:'Boletín mención',     price:50000,  unit:'/mes · bloque en el cuerpo, hasta 3 marcas · 6 envíos/mes'},
+    {id:'patrocinado',  name:'Boletín patrocinado', price:120000, unit:'/mes · bloque superior, exclusivo 1 marca · 12 envíos/mes (lun-mié-vie)'},
+    {id:'mailing',      name:'Mailing masivo NL',   price:80000,  unit:'por envío · dedicado a toda la base de suscriptores (50K usuarios AMM · NL)'},
   ],
   pantallas:[
     {id:'pantallastaxi', name:'Pantallas Tribuna Capital — Taxis ejecutivos', price:145000, unit:'/mes · presencia en 200 pantallas digitales, ruta Aeropuerto MTY–Monterrey'},
   ]
 };
 const PKGS = {
-  basico:  {label:'Paquete Básico (Ideal PyMEs)', price:38000, subs:['Impreso: Cuarto de Plana','Digital: Banner web','Redes: 4 posteos/mes']},
-  estandar:{label:'Paquete Estándar', price:78000, subs:['Impreso: Robaplana','Digital: Leaderboard','Redes: 8 posteos/mes','Newsletter: mención NL']},
-  premium: {label:'Paquete Premium (Presencia total)', price:165000, subs:['Impreso: Plana completa','Digital: todos los espacios','Redes: 12 posteos/mes','Newsletter diario']},
+  basico:  {label:'Paquete Básico (Ideal PyMEs)', price:115000, subs:['Digital: Banner Rectangle','Impreso: Cuarto de Plana','Redes: 8 posteos/mes']},
+  estandar:{label:'Paquete Estándar', price:220000, subs:['Digital: Leaderboard','Impreso: Media Plana','Redes: 12 posteos/mes','Newsletter: mención']},
+  premium: {label:'Paquete Premium (Presencia total)', price:450000, subs:['Digital: 3 espacios fijos','Impreso: Plana completa','Redes: 12 posteos/mes','Newsletter patrocinado']},
 };
 
 let cart={}, selectedPkg=null, months=1, discount=0, activeChannel='impreso';
@@ -413,11 +413,11 @@ function checkUpsell(){
   const hasM=Object.keys(cart).some(id=>CATALOG.mailing.find(i=>i.id===id));
   const hasP=Object.keys(cart).some(id=>CATALOG.pantallas.find(i=>i.id===id));
   let msg='',cta='',fn=null;
-  if(selectedPkg==='basico')       {msg='El Paquete Estándar suma Robaplana, Leaderboard y mención en newsletter — por solo $40,000 adicionales/mes.'; cta='Cambiar a Estándar'; fn=()=>selectPkg('estandar');}
-  else if(selectedPkg==='estandar'){msg='El Paquete Premium te da plana completa, presencia en todos los espacios digitales y newsletter diario — por $87,000 adicionales/mes.'; cta='Cambiar a Premium'; fn=()=>selectPkg('premium');}
-  else if(hasI&&!hasD)             {msg='Añade un banner digital (desde $6,500/mes) y llega también a la audiencia del portal de Tribuna Capital en el AMM.'; cta='Agregar digital'; fn=()=>setChannel('digital',document.querySelector('[data-ch="digital"]'));}
-  else if(hasD&&!hasR)             {msg='Complementa con un Pack de posteos en Instagram y Facebook de Tribuna Capital (desde $16,000/mes) para amplificar el alcance de tu campaña.'; cta='Agregar redes'; fn=()=>setChannel('redes',document.querySelector('[data-ch="redes"]'));}
-  else if((hasI||hasD||hasR)&&!hasM){msg='La mención en el newsletter matutino del AMM (desde $5,500/mes) es un canal directo al inbox de tomadores de decisión.'; cta='Agregar newsletter'; fn=()=>setChannel('mailing',document.querySelector('[data-ch="mailing"]'));}
+  if(selectedPkg==='basico')       {msg='El Paquete Estándar suma Leaderboard, Media Plana y mención en newsletter — por solo $105,000 adicionales/mes.'; cta='Cambiar a Estándar'; fn=()=>selectPkg('estandar');}
+  else if(selectedPkg==='estandar'){msg='El Paquete Premium te da plana completa, presencia en 3 espacios digitales fijos y newsletter patrocinado — por $230,000 adicionales/mes.'; cta='Cambiar a Premium'; fn=()=>selectPkg('premium');}
+  else if(hasI&&!hasD)             {msg='Añade un banner digital (desde $45,000/mes) y llega también a la audiencia del portal de Tribuna Capital en el AMM.'; cta='Agregar digital'; fn=()=>setChannel('digital',document.querySelector('[data-ch="digital"]'));}
+  else if(hasD&&!hasR)             {msg='Complementa con un Pack de posteos en Instagram y Facebook de Tribuna Capital (desde $42,000/mes) para amplificar el alcance de tu campaña.'; cta='Agregar redes'; fn=()=>setChannel('redes',document.querySelector('[data-ch="redes"]'));}
+  else if((hasI||hasD||hasR)&&!hasM){msg='La mención en el newsletter matutino del AMM (desde $50,000/mes) es un canal directo al inbox de tomadores de decisión.'; cta='Agregar newsletter'; fn=()=>setChannel('mailing',document.querySelector('[data-ch="mailing"]'));}
   else if((hasI||hasD||hasR||hasM)&&!hasP){msg='Suma las pantallas digitales en taxis ejecutivos (desde $145,000/mes) y alcanza directamente a viajeros de negocios en su trayecto desde el aeropuerto.'; cta='Agregar pantallas'; fn=()=>setChannel('pantallas',document.querySelector('[data-ch="pantallas"]'));}
   else { box.classList.remove('show'); return; }
   txt.textContent=msg; ctaLbl.textContent=cta; ctaBtn.onclick=fn;
